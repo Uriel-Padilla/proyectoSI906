@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Proyecto_SI_906.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Label ID="Label1" runat="server" Text="Login" style="z-index: 100; left: 146px; position: absolute; top: 208px" Font-Bold="False" Font-Names="Modern" Font-Size="24pt" ForeColor="Red"></asp:Label>
+    <asp:Label ID="labellogin" runat="server" Text="Login" style="z-index: 100; left: 146px; position: absolute; top: 208px" Font-Bold="False" Font-Names="Modern" Font-Size="24pt" ForeColor="Red"></asp:Label>
         <table style="z-index: 100; left: 140px; position: absolute; top: 303px; font-family: 'Lucida Console';">
             <tr>
                 <td style="width: 100px; height: 21px">

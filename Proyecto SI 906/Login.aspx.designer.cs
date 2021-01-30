@@ -13,13 +13,13 @@ namespace Proyecto_SI_906 {
     public partial class Login {
         
         /// <summary>
-        /// Control Label1.
+        /// Control labellogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label labellogin;
         
         /// <summary>
         /// Control lidtxt.
