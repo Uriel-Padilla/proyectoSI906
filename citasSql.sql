@@ -1,0 +1,1 @@
+﻿CREATE TABLE [dbo].[Citas] (    [IdCita]       INT           IDENTITY (1, 1) NOT NULL,    [Paciente]     VARCHAR (18)  NOT NULL,    [Departamento] VARCHAR (100) NOT NULL,    [IdUser]       INT           NOT NULL,    [Fecha] DATETIME NOT NULL,     PRIMARY KEY CLUSTERED ([IdCita] ASC));

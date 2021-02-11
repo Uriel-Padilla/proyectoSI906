@@ -67,17 +67,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Altas.aspx" />
     <Content Include="App_data\SI906.mdf" />
     <Content Include="App_data\SI906_log.ldf">
       <DependentUpon>SI906.mdf</DependentUpon>
     </Content>
+    <Content Include="Farmacia.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MedicalTest.aspx" />
+    <Content Include="Menu.aspx" />
+    <Content Include="PatientEliminacion.aspx" />
+    <Content Include="PatientModificacion.aspx" />
+    <Content Include="PatientRecepcion.aspx" />
     <Content Include="PatientRegistration.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Altas.aspx.cs">
+      <DependentUpon>Altas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Altas.aspx.designer.cs">
+      <DependentUpon>Altas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmacia.aspx.cs">
+      <DependentUpon>Farmacia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmacia.aspx.designer.cs">
+      <DependentUpon>Farmacia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -91,6 +112,41 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalTest.aspx.cs">
+      <DependentUpon>MedicalTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalTest.aspx.designer.cs">
+      <DependentUpon>MedicalTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientEliminacion.aspx.cs">
+      <DependentUpon>PatientEliminacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientEliminacion.aspx.designer.cs">
+      <DependentUpon>PatientEliminacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientModificacion.aspx.cs">
+      <DependentUpon>PatientModificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientModificacion.aspx.designer.cs">
+      <DependentUpon>PatientModificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRecepcion.aspx.cs">
+      <DependentUpon>PatientRecepcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientRecepcion.aspx.designer.cs">
+      <DependentUpon>PatientRecepcion.aspx</DependentUpon>
     </Compile>
     <Compile Include="PatientRegistration.aspx.cs">
       <DependentUpon>PatientRegistration.aspx</DependentUpon>
@@ -124,6 +180,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="pics\" />

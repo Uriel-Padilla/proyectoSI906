@@ -42,7 +42,7 @@ namespace Proyecto_SI_906
                 cmd.Parameters.AddWithValue("@pSegundoApellido", txtSegundoApellido.Text);
                 cmd.Parameters.AddWithValue("@pnombre", txtNombre.Text);
                 cmd.Parameters.AddWithValue("@pfecnac", txtFechaNac.Text);
-                cmd.Parameters.AddWithValue("@pedonac", ddEstado.SelectedValue);
+                cmd.Parameters.AddWithValue("@pedonac", ddEstadoNacimiento.SelectedValue);
                 cmd.Parameters.AddWithValue("@psexo", ddSexo.SelectedValue);
                 cmd.Parameters.AddWithValue("@pnacorigen", ddNacionalidadOrigen.SelectedValue);
                 cmd.Parameters.AddWithValue("@pfolio", txtFolio.Text);
@@ -55,7 +55,7 @@ namespace Proyecto_SI_906
                 cmd.ExecuteNonQuery();
 
                 Response.Write("El usuario fue agregado exitosamente.");
-                Response.Redirect("Login.aspx");
+                Response.Redirect("Menu.aspx");
                 conn.Close();
             }
             catch (Exception exe)
@@ -82,6 +82,47 @@ namespace Proyecto_SI_906
                 ClearControl(childControl);
             }
             txtCurp.Focus();
+        }
+
+        protected void ddEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Response.Write("<script language=javascript>alert('ERROR');</script>");
+            txtNombre.Text = ddEstado.SelectedValue;
+            /*
+               ddMunicipio.Items.Clear();
+            
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["SI906"].ConnectionString;
+                conn = new SqlConnection(connectionString);
+                try
+                {
+                    conn.Close();
+                    conn.Open();
+                }
+                catch (Exception exe)
+                {
+                    Response.Write("Hubo un error al conectarse a la base de datos, intente mas tarde");
+                    Response.Write(exe.ToString());
+                }
+                string insertuser = "SELECT MUNICIPIO FROM MUNICIPIOS WHERE EFE_KEY=(SELECT CATALOG_KEY FROM ESTADOS WHERE CONVERT(VARCHAR,ENTIDAD_FEDERATIVA)=@pedo);";
+                cmd = new SqlCommand(insertuser, conn);
+                cmd.Parameters.AddWithValue("@pedo", ddEstado.SelectedValue);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    ddMunicipio.Items.Add(dr["MUNICIPIO"].ToString());
+                }
+
+                Response.Write("El usuario fue agregado exitosamente.");
+                Response.Redirect("Login.aspx");
+                conn.Close();
+            }
+            catch (Exception exe)
+            {
+                Response.Write("Error" + exe.ToString());
+            }*/
         }
     }
 }

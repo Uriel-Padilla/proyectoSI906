@@ -3,13 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <table style="z-index: 102; left: 104px; font-family: 'Lucida Console'; position: absolute; top: 190px">
         <tr>
-            <td style="color: #FFFFFF;" class="auto-style3">CURP:&nbsp;</td>
+            <td style="color: #000000;" class="auto-style3">CURP:&nbsp;</td>
             <td class="auto-style4">
                 <asp:TextBox ID="txtCurp" runat="server" MaxLength="18"></asp:TextBox></td>
             <td class="auto-style4">
-                <span style="color: #FFFFFF">ESTADO</span><span style="color: #ffffff; font-family: Lucida Console">:</span></td>
+                <span style="color: #000000">ESTADO</span><span style="color: #000000; font-family: Lucida Console">:</span></td>
             <td class="auto-style4">
-                <asp:DropDownList ID="ddEstado" runat="server" Width="96px" DataSourceID="SqlDataSourceSI906" DataTextField="ENTIDAD_FEDERATIVA" DataValueField="CATALOG_KEY">
+                <asp:DropDownList ID="ddEstado" runat="server" Width="96px" DataSourceID="SqlDataSourceSI906" DataTextField="ENTIDAD_FEDERATIVA" DataValueField="CATALOG_KEY" OnSelectedIndexChanged="ddEstado_SelectedIndexChanged" OnTextChanged="ddEstado_SelectedIndexChanged">
                     <asp:ListItem>...select...</asp:ListItem>
                     <asp:ListItem>Starting</asp:ListItem>
                     <asp:ListItem>Mild</asp:ListItem>
@@ -17,10 +17,10 @@
                 </asp:DropDownList></td>
         </tr>
         <tr>
-            <td style="width: 135px; font-size: 11pt; color: #FFFFFF;">PRIMER APELLIDO:</td>
+            <td style="width: 135px; font-size: 11pt; color: #000000;">PRIMER APELLIDO:</td>
             <td style="width: 100px">
                 <asp:TextBox ID="txtPrimerApellido" runat="server"></asp:TextBox></td>
-            <td style="width: 100px; color: #FFFFFF;">MUNICIPIO:</td>
+            <td style="width: 100px; color: #000000;">MUNICIPIO:</td>
             <td style="width: 100px">
                 <asp:DropDownList ID="ddMunicipio" runat="server" Width="96px" DataSourceID="SqlDataSourceMunicipios" DataTextField="MUNICIPIO" DataValueField="CATALOG_KEY">
                     <asp:ListItem>...select...</asp:ListItem>
@@ -32,11 +32,11 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 135px; color: #FFFFFF;">SEGUNDO APELLIDO:</td>
+            <td style="width: 135px; color: #000000;">SEGUNDO APELLIDO:</td>
             <td style="width: 100px">
                 <asp:TextBox ID="txtSegundoApellido" runat="server"></asp:TextBox></td>
             <td style="width: 100px">
-                <span style="color: #FFFFFF">LOCALIDAD</span><span style="color: #ffffff; font-family: Lucida Console">:</span></td>
+                <span style="color: #000000">LOCALIDAD</span><span style="color: #000000; font-family: Lucida Console">:</span></td>
             <td style="width: 100px">
                 <asp:DropDownList ID="ddLocalidad" runat="server" Width="96px" DataSourceID="SqlDataSourceLocalidad" DataTextField="LOCALIDAD" DataValueField="CATALOG_KEY">
                 </asp:DropDownList>
@@ -44,10 +44,10 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 135px; height: 26px; color: #FFFFFF;">NOMBRE:</td>
+            <td style="width: 135px; height: 26px; color: #000000;">NOMBRE:</td>
             <td style="width: 100px; height: 26px">
                 <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></td>
-            <td style="width: 100px; height: 26px; color: #FFFFFF;">TIPO DE BENEFICIARIO:</td>
+            <td style="width: 100px; height: 26px; color: #000000;">TIPO DE BENEFICIARIO:</td>
             <td style="width: 100px; height: 26px">
                 <asp:DropDownList ID="ddTipoBeneficiario" runat="server">
                     <asp:ListItem Value="01">Trabajador/Asegurado</asp:ListItem>
@@ -58,15 +58,15 @@
             </td>
         </tr>
         <tr>
-            <td style="color: #FFFFFF;" class="auto-style1">FECHA DE NACIMIENTO:</td>
+            <td style="color: #000000;" class="auto-style1">FECHA DE NACIMIENTO:</td>
             <td class="auto-style2">
-                <asp:TextBox ID="txtFechaNac" runat="server"></asp:TextBox></td>
-            <td style="color: #FFFFFF;" class="auto-style2">CLAVE DE DEPENCIA:</td>
+                <asp:TextBox ID="txtFechaNac" runat="server" MaxLength="8"></asp:TextBox></td>
+            <td style="color: #000000;" class="auto-style2">CLAVE DE DEPENCIA:</td>
             <td class="auto-style2">
-                <asp:TextBox ID="txtClaveDependencia" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtClaveDependencia" runat="server" MaxLength="3"></asp:TextBox></td>
         </tr>
         <tr>
-            <td style="width: 135px; color: #FFFFFF; height: 64px;">ESTADO DE NACIMIENTO:</td>
+            <td style="width: 135px; color: #000000; height: 64px;">ESTADO DE NACIMIENTO:</td>
             <td style="width: 100px; height: 64px;">
                 <asp:DropDownList ID="ddEstadoNacimiento" runat="server" Width="96px" DataSourceID="SqlDataSourceSI906" DataTextField="ENTIDAD_FEDERATIVA" DataValueField="CATALOG_KEY">
                     <asp:ListItem>...select...</asp:ListItem>
@@ -77,12 +77,12 @@
                 <asp:SqlDataSource ID="SqlDataSourceSI906" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionStringSI906 %>" SelectCommand="SELECT * FROM [ESTADOS]"></asp:SqlDataSource>
             </td>
             <td style="width: 100px; height: 64px;">
-                <span style="color: #FFFFFF">CLAVE DEL PROGRAMA:</span></td>
+                <span style="color: #000000">CLAVE DEL PROGRAMA:</span></td>
             <td style="width: 100px; height: 64px;">
-                <asp:TextBox ID="txtClavePrograma" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtClavePrograma" runat="server" MaxLength="20"></asp:TextBox></td>
         </tr>
         <tr>
-            <td style="width: 135px; color: #FFFFFF;">SEXO:</td>
+            <td style="width: 135px; color: #000000;">SEXO:</td>
             <td style="width: 100px">
                 <asp:DropDownList ID="ddSexo" runat="server">
                     <asp:ListItem Value="M">Mujer</asp:ListItem>
@@ -93,7 +93,7 @@
             <td style="width: 100px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 135px; color: #FFFFFF;">NACIONALIDAD DE ORIGEN:</td>
+            <td style="width: 135px; color: #000000;">NACIONALIDAD DE ORIGEN:</td>
             <td style="width: 100px">
                 <asp:DropDownList ID="ddNacionalidadOrigen" runat="server" DataSourceID="SqlDataSourceNacionalidad" DataTextField="PAIS" DataValueField="CODIGO_PAIS">
                     <asp:ListItem>...select...</asp:ListItem>
@@ -107,9 +107,9 @@
         </tr>
         <tr>
             <td style="width: 135px">
-                <span style="color: #FFFFFF">FOLIO</span><span style="color: #ffffff; font-family: Lucida Console">:</span></td>
+                <span style="color: #000000">FOLIO</span><span style="color: #000000; font-family: Lucida Console">:</span></td>
             <td style="width: 100px">
-                <asp:TextBox ID="txtFolio" runat="server" ></asp:TextBox></td>
+                <asp:TextBox ID="txtFolio" runat="server" MaxLength="3" ></asp:TextBox></td>
             <td style="width: 100px">
                 <asp:Button ID="subbtn" runat="server" Text="Submit" Width="94px" OnClick="subbtn_Click" />
             </td>
@@ -117,8 +117,8 @@
                 <asp:Button ID="Button2" runat="server" Text="Limpiar" OnClick="Button2_Click" /></td>
         </tr>
     </table>
-    <asp:Label ID="Label1" runat="server" Font-Names="Modern" Font-Size="24pt" ForeColor="White"
-        Style="z-index: 100; left: 260px; position: absolute; top: 148px" Text="Registro de pacientes" Font-Bold="True"></asp:Label>
+    <asp:Label ID="Label1" runat="server" Font-Names="Arial Black" Font-Size="24pt" ForeColor="Black"
+        Style="z-index: 100; left: 260px; position: absolute; top: 148px" Text="Registro de pacientes" Font-Bold="True" CssClass="auto-style5"></asp:Label>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="head">
     <style type="text/css">
@@ -137,6 +137,9 @@
         .auto-style4 {
             width: 100px;
             height: 26px;
+        }
+        .auto-style5 {
+            right: 174px;
         }
     </style>
 </asp:Content>

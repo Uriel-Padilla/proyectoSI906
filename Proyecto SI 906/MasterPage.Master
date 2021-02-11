@@ -27,6 +27,11 @@
         <br />
         <asp:Image ID="Image1" runat="server" Height="584px" ImageUrl="~/pics/Hospital Image.png"
             Style="z-index: 100; left: 72px; position: absolute; top: 8px" Width="848px" />
+        <asp:Menu ID="Menu2" runat="server" style="z-index: 105; left: 79px; position: absolute; top: 108px" Font-Names="Arial Black" Font-Size="14pt" ForeColor="#3399FF" Orientation="Horizontal">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/Menu.aspx" Text="&lt;  Home" Value="&lt;  Home"></asp:MenuItem>
+        </Items>
+    </asp:Menu>
         <br />
         <br />
         <br />

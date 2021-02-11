@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+    <siteMapNode url="" title="Menú"  description="">
+            <siteMapNode url="~/Login.aspx" title="Login" description=""/>
+            <siteMapNode url="" title="Paciente" description="">
+              <siteMapNode url="~/PatientRegistration.aspx" title="Agregar paciente"  description="" />
+              <siteMapNode url="~/PatientModificacion.aspx" title="Modificar paciente"  description="" />
+              <siteMapNode url="~/PatientEliminacion.aspx" title="Eliminar paciente"  description="" />
+              <siteMapNode url="~/PatientRecepcion.aspx" title="Recepcion de pacientes"  description="" />
+            </siteMapNode>
+
+            <siteMapNode url="~/MedicalTest.aspx" title="Laboratorio" description="my fav movies"/>
+            <siteMapNode url="~/Farmacia.aspx" title="Farmacia"  description="" />
+            <siteMapNode url="~/Altas.aspx" title="Altas"  description="" />
+
+
+    </siteMapNode>
+
+     
+
+</siteMap>
